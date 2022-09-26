@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package = "github.com/vulpes-ferrilata/user-service-proto/pb";
+
+package pb;
+
+import "protobuf/requests/get_user_by_id.proto";
+import "protobuf/requests/create_user.proto";
+
+import "protobuf/responses/user.proto";
+import "google/protobuf/empty.proto";
+
+service User {
+    rpc GetUserByID(requests.GetUserByID) returns (responses.User) {}
+
+    rpc CreateUser(requests.CreateUser) returns (google.protobuf.Empty) {}
+}

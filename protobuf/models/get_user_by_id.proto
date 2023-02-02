@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+option go_package = "github.com/vulpes-ferrilata/user-service-proto/pb/models";
+
+package models;
+
+message GetUserByID {
+    string UserID = 1;
+}
